@@ -96,7 +96,7 @@ The things to keep in mind about tables are:
  - Every `<td>` or `<th>` element must reside within a row, a `<tr>` element.
  - Every `<tr>` must have the same number of cells, or things get out of whack.
 
-Despite this last rule, you can, however, "merge" cells using the `colspan` and `rowspan` attributes:
+Despite this last rule, you can, however, "merge" cells using the `colspan` attribute:
 
     <table>
       <tr>
@@ -129,36 +129,6 @@ produces:
 </table>
 
 You can see that we've merged two cells in the first row together; the `colspan="2"` on the first cell ensures that we don't violate the "every `<tr>` must have the same number of cells" rule.
-
-Similarly, you can merge cells vertically:
-
-    <table>
-      <tr>
-        <th rowspan="2">People</th>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-      <tr>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-    </table>
-
-produces:
-
-<table>
-  <tr>
-    <th rowspan="2">People</th>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
-  </tr>
-</table>
-
-Now, each row has three cells. The second row doesn't look like it at first glance, but the first cell in the first row is spanning down across two rows, so the second row really does have three cells.
 
 **Your task:** Try to create a "What I've Done" section similar to [the one you see here](http://appdevspring16.github.io/friendbook/intermediate.html).
 
