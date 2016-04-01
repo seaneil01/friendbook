@@ -1,12 +1,12 @@
 # Friendbook
 
-In this project, we'll create our very first HTML page; a profile of ourselves. In the end, we'll work our way up to something that looks like [this target](http://dsgn425-2016.github.io/friendbook-target/raghu-b.html).
+In this project, we'll create our very first HTML page; a profile of ourselves. In the end, we'll work our way up to something that looks like [this target](http://appdevspring16.github.io/friendbook/raghu-b.html).
 
 ## Structure with HTML
 
 ### Raw Content
 
-We'll start by getting the raw content into the page, and ignore styling for now. Our first target is something that looks like [this target](http://dsgn425-2016.github.io/friendbook-target/intermediate.html).
+We'll start by getting the raw content into the page, and ignore styling for now. Our first target is something that looks like [this target](http://appdevspring16.github.io/friendbook/intermediate.html).
 
  1. Create your own page called `[first name]-[last-initial].html` (for example, I called mine `raghu-b.html`).
  1. Type in your own content:
