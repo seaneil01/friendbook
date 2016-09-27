@@ -59,6 +59,9 @@ task :grade do # if needed in the future, add => :environment
   puts "* WITH DETAILED RESULTS" if options[:verbose]
   puts "* IGNORING ARGUMENTS #{ARGV[1..-1]}" if ARGV.length > 1
 
+  puts
+  puts "#{"Note on HW1".header_format}: Hey! So these tests are just *minimal* tests, meant to make sure you've been able to get going. The most important thing is to start getting used to putting content on an html page. If you're comfortable, then great!... but if you want, we'd be happy to go through your page or any other questions one on one. (Also, we haven't tested for CSS styling, but that's definitely something you should try.)"
+
   if options[:verbose]
     puts
     puts "#{header_outline_counter}. READ PERSONAL/PROJECT SETTINGS".header_format
