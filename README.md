@@ -1,3 +1,11 @@
+[
+  Raghu, things to update:
+  A. File to modify is public/first-assignment.html (need uniform name for testing)
+  B. "bundle", etc.
+  C. "rake grade"
+]
+
+
 # Friendbook
 
 In this project, we'll create our very first HTML page; a profile of ourselves. In the end, we'll work our way up to something that looks like [this target](http://appdevspring16.github.io/friendbook/raghu-b.html).
