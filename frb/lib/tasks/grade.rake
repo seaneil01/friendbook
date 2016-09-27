@@ -16,13 +16,13 @@ task :grade do # if needed in the future, add => :environment
     project_token = config["project_token"]
     submission_url = config["submission_url"]
   rescue
-    abort("ERROR: Does the file .firstdraft.yml exist?")
+    abort("ERROR: Does the file .firstdraft_project.yml exist?")
   end
   if !project_token
-    abort("ERROR: Is project_token set in .firstdraft.yml?")
+    abort("ERROR: Is project_token set in .firstdraft_project.yml?")
   end
   if !submission_url
-    abort("ERROR: Is submission_url set in .firstdraft.yml?")
+    abort("ERROR: Is submission_url set in .firstdraft_project.yml?")
   end
 
   student_token_filename_base = ".firstdraft_student.yml"
