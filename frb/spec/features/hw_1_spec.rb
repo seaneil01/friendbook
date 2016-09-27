@@ -3,21 +3,10 @@ require "rails_helper"
 show_tests_in_browser = true
 do_not_show_tests_in_browser = false
 
-feature "HTML page:", js: do_not_show_tests_in_browser do
+feature "HTML page (raw content, semantic markup, images):", js: do_not_show_tests_in_browser do
   before :each do
     visit "/first-assignment.html"
   end
-
-  # IGNORE BECAUSE NEXT TEST DOESN'T ALWAYS WORK
-  # scenario "page is not empty", points: 1 do
-  #   expect(page).to have_content
-  # end
-
-  # SOMETIMES DOES NOT WORK BECAUSE ELEMENTS SEEM TO BE FILLED IN AUTOMATICALLY IF A FILE ONLY CONTAINS TEXT OR CERTAIN ELEMENTS
-  # scenario "contains some basic html structure", points: 1 do
-  #   expect(page).to have_selector("html")
-  #   expect(page).to have_selector("body")
-  # end
 
   scenario "<body> element has text (hopefully some Raw Content added)", points: 1 do
     expect(page.find("body").text).not_to eq("")
@@ -34,19 +23,27 @@ feature "HTML page:", js: do_not_show_tests_in_browser do
     expect(page).to have_selector("li")
   end
 
-
+  scenario "includes at least four images", points: 2 do
+    expect(page).to have_selector("img", :minimum => 4)
+  end
 end
 
+feature "HTML page (tables, embedding, styling with css):", js: do_not_show_tests_in_browser do
+  before :each do
+    visit "/first-assignment.html"
+  end
 
+  scenario "has <table>, <tr>, <th>, and <td> elements", points: 2 do
+    expect(page).to have_selector("table")
+    expect(page).to have_selector("tr")
+    expect(page).to have_selector("th")
+    expect(page).to have_selector("td")
+  end
 
-    # expect(page).to have_selector("form", count: 1)
-    # expect(page).to have_selector("label", text: "Email")
-    # expect(page).to have_selector("input[type=submit][value='Log in']")
-    # expect(page).to have_content("Signed in successfully.")
-    # within("nav") {
-    #   expect(page).to have_link(user.username, href: "/users/edit")
-    #   expect(page).to have_link(nil, href: "/users/sign_out")
-    #   expect(page).not_to have_link("Dummy Sign Out Link")
-    # }
-
-
+  scenario "has Google Maps, Vine, and Youtube <iframe> embeds", points: 1 do
+    expect(page).to have_selector("iframe", :minimum => 3)
+    expect(page).to have_css("iframe[src*='google']")
+    expect(page).to have_css("iframe[src*='vine']")
+    expect(page).to have_css("iframe[src*='youtube']")
+  end
+end
