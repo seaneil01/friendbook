@@ -9,7 +9,7 @@ target](http://appdevspring17.github.io/friendbook/dde_with_table.html).
 ### Raw Content
 
 We'll start by getting the raw content into the page, and ignore styling for now. Our first target
-is something that looks like [this target](http://appdevspring16.github.io/friendbook/dde_intermediate.html).
+is something that looks like [this target](http://appdevspring17.github.io/friendbook/dde_intermediate.html).
 
  1. Create your own page called `[first name]-[last-initial].html` (for example, I called mine `raghu-b.html`).
  1. Type in your own content:
